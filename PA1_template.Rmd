@@ -1,8 +1,9 @@
 ---
 title: "Reproducible Research: Peer Assessment 1"
-output: 
-  html_document:
-    keep_md: true
+author: "Juan A. Reyes D."
+date: "11/3/2018"
+output: html_document
+keep_md: true
 ---
 
 
