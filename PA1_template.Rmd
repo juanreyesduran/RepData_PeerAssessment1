@@ -46,6 +46,7 @@ ggplot(Total_Steps, aes(x = steps)) +
 TotalNumbersSteps[, .(MeanSteps = mean(steps, na.rm = TRUE), MedianSteps = median(steps, na.rm = TRUE))]
 ```
    MeanSteps MedianSteps
+   
 1:  10766.19       10765
 
 ## What is the average daily activity pattern?
