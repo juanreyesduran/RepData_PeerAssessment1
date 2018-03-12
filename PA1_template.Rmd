@@ -30,13 +30,13 @@ ActivityData <- data.table::fread(input = "data/activity.csv")
 ```{r}
 TotalNumbersSteps <- ActivityData[, c(lapply(.SD, sum, na.rm = FALSE)), .SDcols = c("steps"), by = .(date)] 
 
-head(TotalNumbersSteps, 10)
+head(TotalNumbersSteps)
 ```
 
 2. Make a histogram of the total number of steps taken each day. 
 
 ```{r}
-ggplot(Total_Steps, aes(x = steps)) +
+ggplot(TotalNumbersSteps, aes(x = steps)) +
     geom_histogram(fill = "green", binwidth = 1000) +
     labs(title = "Daily Steps", x = "Steps", y = "Frequency")
 ```
