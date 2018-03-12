@@ -40,7 +40,7 @@ ggplot(TotalNumbersSteps, aes(x = steps)) +
     geom_histogram(fill = "green", binwidth = 1000) +
     labs(title = "Daily Steps", x = "Steps", y = "Frequency")
 ```
-![plot of chunk unnamed-chunk-1](figure/unnamed-chunk-1.png) 
+![plot of chunk unnamed-chunk-4-1](/unnamed-chunk-4-1.png)
 
 3. Calculate and report the mean and median of the total number of steps taken per day
 ```{r}
@@ -56,6 +56,7 @@ StepsPerBlock <- aggregate(steps ~ interval, ActivityData, mean)
 
 ggplot(StepsPerBlock, aes(x = interval , y = steps)) + geom_line(color="green", size=1) + labs(title = "Average Daily Steps", x = "Interval", y = "Average Steps per Day")
 ```
+![plot of chunk unnamed-chunk-6-1](/unnamed-chunk-6-1.png) 
 
 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -98,6 +99,8 @@ median(StepsPerDate$steps)
 ggplot(StepsPerDate, aes(x = steps)) + geom_histogram(fill = "green", binwidth = 1000) + labs(title = "Daily Steps", x = "Steps", y = "Frequency")
 ```
 
+![plot of chunk unnamed-chunk-11-1](/unnamed-chunk-11-1.png) 
+
 Type of Estimate | Mean_Steps | Median_Steps
 --- | --- | ---
 With NA               |10766.19 | 10765
@@ -122,3 +125,5 @@ ggplot(ActivityDataWeek, aes(interval, steps)) +
   xlab("5-minute Interval") + 
   ylab("Avarage Number of Steps")
 ```
+
+![plot of chunk unnamed-chunk-13-1](/unnamed-chunk-13-1.png) 
